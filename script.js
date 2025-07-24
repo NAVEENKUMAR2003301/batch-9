@@ -112,7 +112,7 @@ console.log(fruit[fruit.length-1]);
 
 // 2.object 
 
-let employee = {
+let employee = { 
     eName : "ragul",
     eRole : "frontend Developer"
 }
