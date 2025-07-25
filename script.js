@@ -122,6 +122,86 @@ console.log(employee);
 console.log(employee.eRole);
 
 
+console.clear();
+
+
+
+// operators 
+
+
+// 1.arthmatic operator 
+// 2.assignment opertaors /
+// 3.comparision operators
+// 4.logical operators 
+
+
+// 1.explain
+
+// addition +
+//subraction -
+// multiplication *
+// division /
+// modulus %
+// increment ++
+//decement --
+// exponencial **
+
+
+console.log(10+20);
+console.log(10-20);
+console.log(10*20);
+console.log(10/20);
+console.log(10%20);
+console.log(10**20);
+
+// increment
+
+// post increment and pre increment
+
+// po - var++
+// pr - ++var
+
+
+
+let num = 20 
+let num1 = num-- + num++ 
+
+//num = 20 = 19
+// 20-- = 19 
+//19++ = 20
+
+// num1 = 20-- = 19 + 20 = 39
+
+
+console.log(num,num1);
+
+
+
+let newNum = 40
+
+let newNum1 = ++newNum
+
+console.log(newNum,newNum1);
+
+
+let num3 = 10 // 10 = 9 = 8
+let num5 = num3-- - num3++
+
+//num3 = 8 s r num3 = 9 m
+//num5=18 s r m
+
+console.log(num3,num5);
+
+
+
+
+
+
+
+
+
+
+
 
 
 
