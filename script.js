@@ -485,14 +485,173 @@ switch(trafficLight){
 
 // condition ? "true" : "false"
 
-let finalScoreStatus = false
+// let finalScoreStatus = false
 
-finalScoreStatus ? console.log("allow gate exam")
- : console.log("not eligible")
- 
-
+// finalScoreStatus ? console.log("allow gate exam")
+//  : console.log("not eligible")
 
 
+console.log(10=="10");
+console.log(10==="10");
+
+
+//  2.explain /
+
+
+// 1.for loop
+// 2.while loop
+// 3.do while
+// 4.for in 
+// 5.for of
+
+
+// 1. for loop 
+
+// for(intialization;contision;iteration){
+
+// }
+
+for(let i = 1; i<10; i++ ){
+    console.log(i);   
+}
+
+
+for(let a = 0;a<10;a++){
+    if(a%2==0){
+        console.log(`even number ${a}`);
+        
+    }else{
+        console.log(`odd number ${a}`);
+        
+    }
+
+
+
+}
+
+console.clear();
+
+
+// while loop 
+
+// initizalation 
+
+// while(condition){
+//     statement 
+//     iteration
+// }
+
+
+let val = 10;
+do{
+    console.log(val); val--
+}
+while(val>=1)
+
+
+
+    // for of 
+
+    let str12 = "javascript"
+    
+    for(let b of str12 ){
+        console.log(b);
+    }
+
+    // for in 
+
+    for(let rahul in str12){
+        console.log(rahul);
+        
+    }
+
+
+    console.clear();
+
+
+    // function 
+
+    function hello(a,b){
+        return a+b
+    }
+
+    hello(1,2)
+   let helloVal = hello(1,2)
+   console.log(helloVal);
+   
+    
+let person1 = {
+    Pname : "monik"
+}
+
+function hi(a,b="enter age"){
+    console.log(`person1 name is : ${a}, person age is : ${b}`);
+    
+}
+
+hi("rahul",22)
+
+
+
+
+// return type 
+
+
+function findRec(l,b){
+    return l*b 
+}
+
+
+let b3 = findRec(100, 200);
+
+console.log(b3);
+
+
+function rec(l,b){
+    let contion = true;
+    if(contion){
+        return l*b
+    }
+}
+let b4 = rec(20,20)
+
+console.log(b4);
+
+
+// var 
+// let 
+// const
+
+
+function outFun(){
+    if(true){
+        var functionVar = "i am a var variable"
+        
+    }
+    console.log(functionVar);
+}
+
+outFun()
+function letFun(){
+    if(true){
+        const functionVar = "i am a let variable"
+        
+        console.log(functionVar);
+    }
+}
+
+letFun()
+
+
+var gScope = "var"
+
+let bScope = "let"
+
+const bscope1 = "const"
+
+console.log(window.gScope);
+console.log(window.bScope);
+console.log(window.bScope1);
 
 
 
@@ -500,8 +659,58 @@ finalScoreStatus ? console.log("allow gate exam")
 
 
 
+var u = 10
+let v = 20
+const w = 30
+
+function accessGlobalScope(){
+    var u = 100
+    var v = 200
+    var w = 300
+
+    console.log(u+v+w);
+    
+
+}
+
+console.log(u+v+w)
+accessGlobalScope()
 
 
+// function types 
 
+// 3 types 
+
+
+// 1.named function
+// 2.anonymous function 
+// 3.arrow function 
+
+
+// 1. explain 
+
+function hello(){
+console.log("named function");
+
+}
+
+hello()
+
+// 2.explain 
+
+
+let hii = function(){
+    console.log("annonyms function"); 
+}
+
+hii()
+
+// 3.explain 
+
+let arrow = ()=>{
+    console.log("arrow function");  
+}
+
+arrow()
 
 
