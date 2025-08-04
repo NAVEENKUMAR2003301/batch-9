@@ -1,3 +1,6 @@
+
+
+
 // variables 
 
 // 1.var 
@@ -713,4 +716,633 @@ let arrow = ()=>{
 
 arrow()
 
+console.clear();
+
+//parameter
+// 1.named function 
+
+function parameter1(a,b=20){
+    console.log(`Named function : ${a+b}`);  
+}
+
+parameter1(10)
+
+//anonymous function
+
+let parameter2 = function(a,b){
+    console.log(`anonymous function : ${a+b}`);
+    
+}
+
+parameter2(30,50)
+
+// Arror function
+
+let parameter3 = (a,b=500)=>{
+    console.log(`Arrow function : ${a+b}`);
+    
+}
+
+parameter3(100)
+
+
+let firstName = "john"
+
+let returnArrow = (a)=>{
+    return a
+}
+
+let ab = returnArrow(firstName)
+
+console.log(ab);
+
+
+
+// higher order function and callback function
+
+let function1 = ()=>{
+    console.log("i am a higher order function");
+    
+}
+
+let function2 = ()=>{
+    console.log("i am a callback function");
+    
+}
+
+function1(function2())
+
+
+function add(callback,a,b){ // 3 sub=callback,a=20,b=40
+    console.log(a+b);// a=20,b=40 = 60
+    callback(20,20) // sub=callback(20,20), sub(20,20)
+    
+}
+
+function sub(num1,num2){ // num1 = 20, num2 = 20
+    console.log(num1-num2); // 20-20 = 0
+    
+}
+
+add(sub,20,40)  // 3
+
+// hoisting
+
+const a5 = 10
+console.log(a5);
+
+
+
+h1()
+function h1(){
+    console.log("heloo");
+    
+}
+
+var h2 = function(){
+    console.log("hello");
+    
+}
+h2()
+
+var h3 = ()=>{
+    console.log("hi");
+    
+}
+
+h3()
+  //self invoke function
+
+//   (function () {
+//     console.log("hello dear");
+//   }
+// )();
+
+// currying and uncurrying 
+
+
+// uncurrying 
+
+function mul(a,b,c){
+    console.log(a*b*c);
+    
+}
+
+mul(10,20,30)
+
+
+// currying 
+
+
+function del(a){ // del (10)
+    return function(b){ // (30)
+        return function(c){ // (40)
+            console.log(a*b*c);
+        }
+    }
+}
+
+del(10)(30)(40)
+
+console.clear();
+
+
+// generator function 
+
+function*gen(){
+    yield "1"
+    yield "2"
+    yield "3"
+    yield "4"
+}
+
+let genn = gen()
+
+console.log(genn.next().value);
+console.log(genn.next().done);
+console.log(genn.next());
+console.log(genn.next());
+console.log(genn.next());
+
+
+
+function*he(){
+
+}
+
+
+function add(i,a,b){
+
+console.log(a+b);
+
+i(20,30)
+}
+function sub(a,b){
+    console.log(a-b);
+    console.log(a*b);
+    console.log(a/b);
+    
+    
+    
+}
+add(sub,10,20)  // 1. add() -- sub(10,20) -- 10-20 = -10
+                 // 2.add()-- NaN
+
+
+// data structure 
+
+// 1.array 
+
+let all = ["one","two","three"]
+
+console.log(all);
+console.log(all[1]);
+console.log(all[all.length-1]);
+console.clear();
+
+
+// 1. multiple var store
+// 2. different datatype hold
+// 3. homegenous - same datatype
+// 4. hetrogenous - different datatype
+// 5. starting val - index[0]
+// 6. flexible - add , remove
+
+// 1.
+
+let mul1 = ["apple","banana","orange"]
+console.log(mul1);
+
+
+// 2.
+
+let mul2 = [1,"two",true,undefined,null,{id:1},["hello"]]
+
+console.log(mul2);
+
+// 3. 
+
+let mul3 = [true,true]
+
+console.log(mul3);
+
+// 4. 
+
+let mul4 = ["hello",true,1,2,3]
+
+console.log(mul4);
+
+//5 
+
+console.log(mul4[0]);
+
+//6 
+
+let mul5 = [1,2,3,,4,5]
+
+mul5.pop()
+mul5.shift()
+mul5.push(5,6)
+mul5.unshift(1)
+
+console.log(mul5);
+
+
+// dense array - 1 ele - index-[0] - contigous memory
+
+// sparse array - Hash table
+
+// object 
+
+
+
+
+
+// multible data store
+// homogenous
+// hetrogenous
+// flexible
+
+// 1.
+let objE = {
+  uName: "ragul",
+  uAge : 22,
+  isPass : true,
+  likeLanguage : ["html","css","js"],
+  friends : {fname:"sriram",fname2:"monik"},
+  play : function(){
+    console.log("cricket");
+  }
+};
+
+
+console.log(objE);
+console.log(objE.play());
+
+console.log(objE.likeLanguage[1]);
+console.log(objE.friends.fname2);
+
+
+
+// 2
+ let stName = {
+    uName1 : "sriram",
+    uName2 : "monik",
+    uName3 : "ragul"
+ }
+
+ console.log(stName);
+
+ // 3
+
+ console.clear();
+ 
+
+ let stDetial ={
+    sName :  "abc",
+    age : 23,
+    all : ["a","b","c"]
+ }
+
+
+ let vechile = {
+    "type vechile" : ["two Wheeler","four wheeler"],
+    "price" : 100000,
+    "fuel Type": "petrol"
+ }
+
+
+ console.log(vechile["fuel Type"]);
+ 
+ 
+// Dynamic property 
+
+let UuName = "monik"
+let UuAge = 23
+
+let person11 = {
+  uName: UuName,
+  uAge: UuAge,
+};
+
+console.log(person11);
+
+let dyn = "emId"
+
+let person2 ={
+    UuName,
+    UuAge,
+    [dyn] : "ifc123",
+    ["dyn"] : "1234"
+}
+
+console.log(person2.dyn);
+
+
+// iteration 
+
+// for of - str array function 
+// for in - obj
+
+
+// for of 
+
+let an = [10,20,30,40]
+
+for(let aa of an){
+    console.log(aa);
+    
+}
+
+let st = "script"
+
+for(let bb of st){
+    console.log(bb);
+    
+}
+
+function*fun(){
+    yield 1
+    yield 2
+    yield 3
+    yield 4
+}
+
+let fu = fun()
+
+for(let cc of fu){
+    console.log(cc);
+    
+}
+
+
+// for in 
+
+let objj = {
+    uname : "a",
+    uage : 4,
+    is : true
+}
+
+for(let dd in objj){
+    console.log(objj[dd]);
+    
+}
+
+for(let ee in st){
+    console.log(ee);
+    
+}
+
+console.clear();
+
+
+
+// es6 edition 
+
+// 1.spread operator
+// 2.rest operator 
+
+// 1
+
+// array  -[...]
+// object  - {...}
+// * two array or two object merge ,clone
+
+// 2
+
+// function - (...)
+
+// * multiple argument parameter store
+
+
+// 1. explain 
+
+// 1. array 
+
+let arr1 = [1,2,3]
+let arr2 = [4,5,6]
+let arr4 = [4,5,6,6,7,8,9]
+
+let arr3 = [...arr1,...arr2,8,9,10,...arr4]
+
+console.log(arr3);
+
+
+// 2.object 
+
+let obj1 = {a:1,b:2}
+let obj2 = {c:3,d:4}
+
+let obj3 = {...obj1,...obj2}
+console.log(obj3);
+
+let userInfo = {
+    uName : "rahul",
+    uAge : 22,
+    eRole : "frontend Developer"
+}
+
+
+let userInfo2 = {
+    Name : "rahul",
+    Age : 23,
+    Role : "backend Developer"
+}
+
+let userInfo3 = {
+    ...userInfo,
+    ...userInfo2,salary : 50000
+}
+
+console.log(userInfo3);
+
+// 2. explain
+
+function rest(...f){
+    console.log(f);
+    
+}
+
+rest(10,20,30,40,50,60,70,80,90,100)
+
+console.clear();
+
+
+
+// destructuring 
+
+let arr5 = [1,2,3,4,5]
+console.log(arr5[0],arr5[1]);
+console.log(arr5[1]);
+console.log(arr5[2]);
+console.log(arr5[3]);
+console.log(arr5[4]);
+
+let [a10,b6,c6,d6,e6] = arr5
+console.log(a10,b6,c6,d6,e6);
+
+let [and,bn,,,cn]= arr5
+console.log(and,bn,cn);
+
+
+
+let array1 = [1,2,3,4,5,6,7,8,9]
+
+let [z1,z2,z3,...z4] = array1
+console.log(z1,z2,z3,z4);
+
+
+let nest = [[1,2,3],[4,5,6],[7,8,9]]
+
+let [[y1,y2,y3],[y4,y5,y6],[y7,y8,y9]] = nest
+console.log(y1,y2,y3,y4,y5,y6,y7,y8,y9);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+console.clear();
+
+
+// array method of manipulated 
+
+// 1.push - last element add
+// 2.pop - last element remove
+// 3.shift - first element remove
+// 4.unshift - first element add
+// 5.splice - add/remove element from specific index
+
+// 1.push - last element add
+let arr6 = [1,2,3,4,5]
+
+arr6.push(6,7,8,9)
+
+console.log(arr6);
+
+// 2.pop - last element remove
+
+let arr7 = [1,2,3,4,5]
+
+arr7.pop()
+
+console.log(arr7);
+
+
+// 3.shift - first element remove
+let arr8 = [1,2,3,4,5]
+arr8.shift()
+console.log(arr8);
+
+
+// 4.unshift - first element add
+let arr9 = [1,2,3,4,5]
+arr9.unshift(0,0.1,0.2,0.3)
+console.log(arr9);
+
+
+// 5.splice - add/remove element from specific index
+let arr10 = [1,2,3,4,5]
+// arr10.splice(indexedDB,removeCount,add)
+arr10.splice(3,2,1,2,3)
+
+console.log(arr10);
+
+
+let fruit3 = ["apple","banana","orange","guava","cherry"]
+fruit3.splice(3,2,"kiwi","mango","apple")
+console.log(fruit3);
+
+
+// how to merge in array methods 
+
+// 1.concat - merge two or more arrays
+// 2.slice - copy array elements from specific index
+// 3.flat - flatten nested arrays
+// 4.fill - fill array elements with a static value
+
+
+// 1.concat - merge two or more arrays
+let Cat1 = [1,2,3]
+let Cat2 = [4,5,6]
+
+let conCat3 = Cat1.concat(Cat2)
+
+console.log(conCat3);
+
+// 2.slice - copy array elements from specific index
+
+let sl = [1,2,3,4,5,6,7,8,9]
+let slice =sl.slice(5,8)
+
+console.log(slice);
+
+// 3.flat - flatten nested arrays
+
+let flat1 = [[1,[2,3]],[4,[[5,6]]],[7,[8,9]]]
+let flat2 = flat1.flat(Infinity)
+console.log(flat2);
+
+
+// 4.fill - fill array elements with a static value
+
+let fill1 = [1,2,3,4,5,6]
+fill1.fill("fyf",0,1)
+console.log(fill1);
+
+console.clear();
+
+
+
+
+// sorting and reversing
+
+// 1.asccii values
+
+let sorted = ["A","a",6,1,8,9,4,0,3,2,5,7,1100011111111111111111111111,222]
+
+sorted.sort()
+
+console.log(sorted);
+
+// reversing 
+let sorted1 = [1,11,67,9,10]
+sorted1.reverse()
+console.log(sorted1);
+
+
+// includes - check if an element exists in an array
+
+let inc = [1,2,3,4,5,6,7,8,9]
+let inc1 = inc.includes(5)
+console.log(inc1)
+
+// convert to array to srting 
+
+// 1.join 
+// 2.to string 
+
+let join1 = [1,2,3,4,5,6,7,8,9]
+
+console.log(join1)
+console.log(join1.join())
+
+let str5 = [1,2,3,4]
+console.log(str5.toString());
 
